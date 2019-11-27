@@ -69,15 +69,23 @@ class UsersAllDataList(generics.ListAPIView):
     serializer_class = UsersAllDataSerializer
     name = 'usersalldata-list'
 
-class UserxList(APIView):
+# class UserxList(APIView):
+#     """
+#     List all snippets, or create a new snippet.
+#     """
+#     def get(self, request, format=None):
+#         thisdict = {}
+#         for x in request.data:
+#             thisdict[x] = request.data[x] + 'LL'
+#         return Response(thisdict)
+
+class UserxList(generics.ListAPIView):
     """
-    List all snippets, or create a new snippet.
+    Views :: Credentials :: User Passwords list
     """
-    def get(self, request, format=None):
-        thisdict = {}
-        for x in request.data:
-            thisdict[x] = request.data[x] + 'LL'
-        return Response(thisdict)
+    queryset = Users.objects.all()
+    serializer_class = UsersSerializer
+    name = 'userx-data'
 
     # def post(self, request, format=None):
     #     serializer = SnippetSerializer(data=request.data)

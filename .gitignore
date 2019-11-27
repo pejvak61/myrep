@@ -1,7 +1,7 @@
-credentials/__pycache__
-drones/__pycache__
-myrep/__pycache__
-.vscode
+credentials/__pycache__/
+drones/__pycache__/
+myrep/__pycache__/
+.vscode/
 credentials/__pycache__/*
 drones/__pycache__/*
 myrep/__pycache__/*

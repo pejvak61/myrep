@@ -12,6 +12,8 @@ class Users(models.Model):
     inserted_timestamp = models.DateTimeField(auto_now_add=True)
     class Meta:
         ordering = ('username',)
+    def __str__(self):
+        return self.username
 
 class UsersDetails(models.Model):
     """

@@ -28,11 +28,14 @@ urlpatterns = [
     url(r'^user-data/',
         views.UsersAllDataList.as_view(),
         name=views.UsersAllDataList.name),
+    url(r'^userx-data/',
+        views.UserxList.as_view(),
+        name=views.UserxList.name),
     url(r'^$',
         views.ApiRoot.as_view(),
         name=views.ApiRoot.name),
 ]
 
-urlpatterns += [
-    path('userx-list/', views.UserxList.as_view()),
-]
+# urlpatterns += [
+#     path('userx-list/', views.UserxList.as_view()),
+# ]
